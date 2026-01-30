@@ -1,0 +1,115 @@
+[{
+  "_id": {
+    "$oid": "6973b7544dba480b833471f6"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlist": "Trending Songs 2025",
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-23T18:00:52.117Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-23T18:00:52.117Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "697438443c795f2473ca5259"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlist": "Trending Hindi songs",
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-24T03:11:00.164Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-24T03:11:00.164Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6974385d3c795f2473ca525e"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlist": "Trending English songs",
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-24T03:11:25.306Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-24T03:11:25.306Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "697438723c795f2473ca5263"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlist": "Punjabi songs",
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-24T03:11:46.425Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-24T03:11:46.425Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "697598606ffa6904bab4fcfe"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlist": "International songs",
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-25T04:13:20.781Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-25T04:13:20.781Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6975d461c8d2b24a7710e141"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlist": "Global trending",
+  "playlistcover": "vinyl-record-with-album-cover-on-package-music-retro-vintage.jpg",
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-25T08:29:21.258Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-25T08:29:21.258Z"
+  },
+  "__v": 0
+}]

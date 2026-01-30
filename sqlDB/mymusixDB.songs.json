@@ -1,0 +1,224 @@
+[{
+  "_id": {
+    "$oid": "6973b7724dba480b833471fe"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlistId": {
+    "$oid": "6973b7544dba480b833471f6"
+  },
+  "song": "Fa9la",
+  "audiofile": "1769191281767.mp3",
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-23T18:01:22.118Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-23T18:01:22.118Z"
+  },
+  "__v": 0,
+  "artist": "Flipperachi"
+},
+{
+  "_id": {
+    "$oid": "6975c02ee792c281ea5fa006"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlistId": {
+    "$oid": "697598606ffa6904bab4fcfe"
+  },
+  "song": "Die With a Smile",
+  "artist": "Lady Gaga and Bruno Mars",
+  "audiofile": "1769324590172.mp3",
+  "songImage": "1769324590267.jpg",
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-25T07:03:10.300Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-25T07:03:10.300Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6977aec6b8bbaa900b06caed"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlistId": {
+    "$oid": "697438723c795f2473ca5263"
+  },
+  "song": "For a Reason",
+  "artist": "Karan Aujla",
+  "audiofile": "1769451205929.mp3",
+  "songImage": null,
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-26T18:13:26.320Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-26T18:13:26.320Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6977af70b8bbaa900b06cb2c"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlistId": {
+    "$oid": "6974385d3c795f2473ca525e"
+  },
+  "song": "Die With a Smile",
+  "artist": "Lady Gaga and Bruno Mars",
+  "audiofile": "1769451375628.mp3",
+  "songImage": "1769451376001.jpg",
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-26T18:16:16.029Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-26T18:16:16.029Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6977b64fb8bbaa900b06cb51"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlistId": {
+    "$oid": "6975d461c8d2b24a7710e141"
+  },
+  "song": "Golden",
+  "artist": "Ejae, Audrey Nuna and Rei Ami",
+  "audiofile": "1769453135043.mp3",
+  "songImage": "1769453135419.jpeg",
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-26T18:45:35.430Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-26T18:45:35.430Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6977b6c9b8bbaa900b06cbae"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlistId": {
+    "$oid": "6974385d3c795f2473ca525e"
+  },
+  "song": "The Fate of Ophelia",
+  "artist": "Taylor Swift",
+  "audiofile": "1769453257776.mp3",
+  "songImage": "1769453257934.jfif",
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-26T18:47:37.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-26T18:47:37.976Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69788ba5b2c30318d08f3728"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlistId": {
+    "$oid": "6975d461c8d2b24a7710e141"
+  },
+  "song": "The Fate of Ophelia",
+  "artist": "Taylor Swift",
+  "audiofile": "1769507748929.mp3",
+  "songImage": "1769507749385.jfif",
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-27T09:55:49.415Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-27T09:55:49.415Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69788be6b2c30318d08f373f"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlistId": {
+    "$oid": "6975d461c8d2b24a7710e141"
+  },
+  "song": "Die With a Smile",
+  "artist": "Lady Gaga and Bruno Mars",
+  "audiofile": "1769507814338.mp3",
+  "songImage": "1769507814698.jpg",
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-27T09:56:54.715Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-27T09:56:54.715Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69788e22b2c30318d08f3776"
+  },
+  "userID": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "playlistId": {
+    "$oid": "697438723c795f2473ca5263"
+  },
+  "song": "One Love",
+  "artist": "Shubh",
+  "audiofile": "1769508386371.mp3",
+  "songImage": "1769508386703.jpg",
+  "createdBy": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "createdAt": {
+    "$date": "2026-01-27T10:06:26.731Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-27T10:06:26.731Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "697b7beca5cef9158c55193a"
+  },
+  "userId": {
+    "$oid": "6973b6854dba480b833471df"
+  },
+  "songId": {
+    "$oid": "6977aec6b8bbaa900b06caed"
+  },
+  "createdAt": {
+    "$date": "2026-01-29T15:25:32.811Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-29T15:25:32.811Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "697b872f746f358395d186ba"
+  },
+  "userId": {
+    "$oid": "6973b6854dba480b833471df"
+  },
+  "songId": {
+    "$oid": "6977b6c9b8bbaa900b06cbae"
+  },
+  "createdAt": {
+    "$date": "2026-01-29T16:13:35.668Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-29T16:13:35.668Z"
+  },
+  "__v": 0
+}]

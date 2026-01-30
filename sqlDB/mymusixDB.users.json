@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "6973b6854dba480b833471df"
+  },
+  "name": "Harry Potter",
+  "email": "harry@gmail.com",
+  "password": "$2b$10$Brur1PsL9qPdRRX5SbCCvu/uiMuzWYn87JqvtS1bIwcitJObJWdxy",
+  "contactNumber": "98987676656",
+  "address": "Hogwarts",
+  "imagePath": "1769191045275.jpg",
+  "member": "No",
+  "role": "User",
+  "createdAt": {
+    "$date": "2026-01-23T17:57:25.485Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-23T17:57:25.485Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6973b6d94dba480b833471e5"
+  },
+  "name": "Admin",
+  "email": "admin@gmail.com",
+  "password": "$2b$10$jfkEi9IwT85pV4wYkCGjguYntyZgwCaZUapsgLqC7SJdGudjcIe1S",
+  "contactNumber": "9988776655",
+  "address": "new york",
+  "imagePath": "1769191129817.webp",
+  "member": "No",
+  "role": "Admin",
+  "createdAt": {
+    "$date": "2026-01-23T17:58:49.983Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-23T17:58:49.983Z"
+  },
+  "__v": 0
+}]
