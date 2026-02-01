@@ -13,6 +13,10 @@ router.get('/playlists' , playlistController.playlists)
 
 router.put('/playlists/:id', auth, playlistController.updatePlaylist);
 
+router.get('/playlistsuser' , auth , playlistController.playlistsuser)
+
+
+
 // router.delete('/playlists/:ID' , )
 
 // router.post('/admin/upload' , )

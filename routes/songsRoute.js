@@ -22,6 +22,9 @@ router.post('/favourites/:id' , auth, songController.addFavourite)
 router.get('/favourites' , auth ,  songController.getMyFavourites)
 
 
+router.post('/addplaylistUser' ,auth , songController.songsplayuser)    /////////add songs by user in playlist
+
+
 
 // router.get('/getAlbums' , )
 

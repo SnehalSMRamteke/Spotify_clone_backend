@@ -40,13 +40,21 @@ const playlists = async(req,res)=>{
          //const plays = await Playlist.find() 
 
          const plays = await Playlist.find()
-                                    .populate("createdBy", "name email") // 🔥 fetch user name
+                                    .populate({
+                                      path: "createdBy",
+                                      match: { role: "Admin" }, // ✅ FILTER HERE
+                                      select: "name email role",
+                                    })
                                     .populate("updatedBy", "name")
                                     .sort({ createdAt: -1 });
-         console.log("plays ",plays);
+                      
+                                    console.log("plays ",plays);
+
+                                    // ❌ Remove playlists created by users
+                      const filteredPlays = plays.filter(play => play.createdBy !== null);
 
                         // ✅ Add BASEURL to playlistcover
-                        const updatedPlays = plays.map(play => ({
+                        const updatedPlays = filteredPlays.map(play => ({
                         ...play._doc,
                         playlistcover: play.playlistcover
                             ? BASEURL + play.playlistcover
@@ -67,6 +75,39 @@ const playlists = async(req,res)=>{
 }
 
 
+const playlistsuser = async(req,res)=>{
+  try {
+
+    const userID = req.user.id;
+   console.log(userID)
+
+   const plays = await Playlist.find({createdBy : userID})
+                              .populate("createdBy", "name email") // 🔥 fetch user name
+                              .populate("updatedBy", "name")
+                              .sort({ createdAt: -1 });
+   console.log("plays ",plays);
+
+                  // ✅ Add BASEURL to playlistcover
+                  const updatedPlays = plays.map(play => ({
+                  ...play._doc,
+                  playlistcover: play.playlistcover
+                      ? BASEURL + play.playlistcover
+                      : BASEURL + "default-playlist.jpg",
+                  }));
+
+//   const plays = req.user.role === "admin"
+//   ? await Playlist.find().populate("createdBy", "name")
+//   : await Playlist.find({ createdBy: req.user.id }).populate("createdBy", "name");
+
+
+  res.status(200).send({ Allplays: updatedPlays, success: true })
+
+} catch (error) {
+  console.log(error)
+  res.status(500).send({ msg: "Server Error" })
+}
+}
+
 
 const updatePlaylist = async (req, res) => {
   try {
@@ -79,17 +120,10 @@ const updatePlaylist = async (req, res) => {
     const updatedPlaylist = await Playlist.findOneAndUpdate( { _id: req.params.id},{ playlist , createdBy: req.user.id},{ new: true } );
 
     if (!updatedPlaylist) {
-      return res.status(404).json({
-        success: false,
-        msg: "Playlist not found or unauthorized"
-      });
+      return res.status(404).json({ success: false, msg: "Playlist not found or unauthorized" });
     }
 
-    res.status(200).json({
-      success: true,
-      msg: "Playlist updated successfully",
-      playlist: updatedPlaylist
-    });
+    res.status(200).json({ success: true, msg: "Playlist updated successfully",playlist: updatedPlaylist});
 
   } catch (error) {
     console.error(error);
@@ -99,4 +133,4 @@ const updatePlaylist = async (req, res) => {
 
 
 
-module.exports = {createPlaylist , playlists ,updatePlaylist}
+module.exports = {createPlaylist , playlists ,updatePlaylist ,playlistsuser}

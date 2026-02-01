@@ -16,7 +16,7 @@ const songs = async(req,res)=>{
 
     const playlistId = req.body?.playlistId;
     const song = req.body?.song;
-   // const songImage = req.body?.songImage;
+    //const songImage = req.body?.songImage;
     const artist = req.body?.artist;
 
     console.log("contro000ler" ,req.user.id ,playlistId , song , artist) 
@@ -58,6 +58,71 @@ const songs = async(req,res)=>{
         res.status(500).send({ msg: "Server Error" })
     }
 }
+
+
+
+const songsplayuser = async(req,res)=>{
+  try {
+    // {playlistId: "697e630243b00685d73a0d3c", songId: "69788be6b2c30318d08f373f"}
+    // playlistId:"697e630243b00685d73a0d3c"
+    // songId: "69788be6b2c30318d08f373f"
+
+    console.log("BODY:", req.body);
+    console.log("FILE:", req.file);
+
+    const playlistId = req.body?.playlistId;
+    const songId = req.body?.songId;
+    //const songImage = req.body?.songImage;
+   // const artist = req.body?.artist;
+
+    console.log("userid" ,req.user.id ) 
+    console.log("playlist id " ,playlistId ) 
+    console.log("songId id " ,songId ) 
+
+      if (!playlistId || !songId) {
+        return res.status(400).send({
+            msg: "playlistId and song are required",
+            success: false,
+        });
+      }
+
+          const createdBy = req.user.id
+          console.log("user ",createdBy)
+          const userID = req.user.id;
+
+          // const audiofile = req.files?.audiofile
+          // ? req.files.audiofile[0].filename
+          // : null;
+
+          // const songImage = req.files?.songImage
+          // ? req.files.songImage[0].filename
+          // : null;
+
+          const songdetails = await Songs.findById(songId)
+
+          //console.log(audiofile , "audiofile")
+          //console.log(songImage , "songImage")
+          console.log(songdetails , "songdetails")
+          console.log(songdetails.song , "songdetails")
+          const audiofile = songdetails.audiofile;
+          const song = songdetails.song;
+          const songImage = songdetails.songImage;
+          const artist = songdetails.artist;
+
+    const newSongs= await Songs.create({ audiofile, playlistId, song , songImage , artist, userID, createdBy })
+    await newSongs.save()
+
+  if (!newSongs) {
+      res.status(400).send({ msg: "Songs not Added", success: false })
+  }
+      res.status(200).send({ msg: "Songs added successfully", success: true })
+
+} catch (error) {
+  console.log(error)
+  res.status(500).send({ msg: "Server Error" })
+}
+}
+
 
 
 const getSongs = async(req,res)=>{
@@ -215,6 +280,8 @@ const getMyFavourites = async (req, res) => {
                                     : BASEURL + "default-song.jpg",
                                 }));
 
+                              console.log("updatedfavs-------",updatedfavs);
+                              
 
     res.status(200).send({ success: true, favs :updatedfavs });
   } catch (err) {
@@ -224,4 +291,4 @@ const getMyFavourites = async (req, res) => {
 
 
 
-module.exports = {songs , getSongs , getSongById ,addFavourite , favDelete ,getMyFavourites ,updatesong}
+module.exports = {songs , getSongs , getSongById ,addFavourite , favDelete ,getMyFavourites ,updatesong , songsplayuser}
