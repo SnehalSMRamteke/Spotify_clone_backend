@@ -42,7 +42,7 @@ const playlists = async(req,res)=>{
          const plays = await Playlist.find()
                                     .populate({
                                       path: "createdBy",
-                                      match: { role: "Admin" }, // ✅ FILTER HERE
+                                      match: { role: "Admin" }, 
                                       select: "name email role",
                                     })
                                     .populate("updatedBy", "name")
