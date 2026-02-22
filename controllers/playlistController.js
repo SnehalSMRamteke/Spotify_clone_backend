@@ -132,5 +132,20 @@ const updatePlaylist = async (req, res) => {
 };
 
 
+const userplaylistdelete = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const songId = req.params.id;  //songid
 
-module.exports = {createPlaylist , playlists ,updatePlaylist ,playlistsuser}
+    console.log("&&&&&&&&&&&&&&&",userId , songId);
+
+    await Playlist.findOneAndDelete({ userId , _id: songId});
+
+    res.status(200).send({ success: true, msg: "Playlist is removed form the list successfully" });
+  } catch (err) {
+    res.status(500).json({ success: false, msg: err.message });
+  }
+};
+
+
+module.exports = {createPlaylist , playlists ,updatePlaylist ,playlistsuser ,userplaylistdelete}

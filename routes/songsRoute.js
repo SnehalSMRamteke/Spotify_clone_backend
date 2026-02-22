@@ -16,6 +16,9 @@ router.get('/songs' , songController.getSongs)
 
 router.put('/songs/:id' , auth ,songController.updatesong)
 
+router.delete('/songs/:id' , auth ,songController.userSongdelete)
+
+
 
 router.post('/favourites/:id' , auth, songController.addFavourite)
 

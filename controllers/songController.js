@@ -177,8 +177,10 @@ const getSongById = async(req,res)=>{
              // ✅ Add BASEURL to audiofile
                 const updatedSongs = songs.map(song => ({
                 ...song._doc,
-                audiofile: BASEURL + song.audiofile
-                    
+                audiofile: BASEURL + song.audiofile,
+                songImage: song.songImage
+                      ? BASEURL + song.songImage
+                      : BASEURL + "default-song.jpg",   
                 }));
              const playlists = await Playlist.findById(id)
                 console.log("playlists" ,playlists.playlist)
@@ -224,6 +226,35 @@ const updatesong = async (req, res) => {//(id,{song , artist});
     res.status(500).json({ msg: "Server error" });
   }
 };
+
+
+const userSongdelete = async (req, res) => {
+  try {
+    const userID = req.user.id;
+    const songId = req.params.id;  //songid
+    //const {playlistId, _id } = req.body
+    console.log(req.body , " ...........songs")
+    
+     //const { _id, playlistId } = req.body;
+
+    if (!songId) {
+      return res.status(400).json({
+        success: false,
+        msg: "Song ID is required"
+      });
+    }
+
+
+    console.log("&&&&&&&&&&&&&&&",userID  ,songId);
+
+    await Songs.findOneAndDelete({ userID , _id: songId });
+
+    res.status(200).send({ success: true, msg: "Song is removed form the List" });
+  } catch (err) {
+    res.status(500).json({ success: false, msg: err.message });
+  }
+};
+
 
 
 const addFavourite = async (req, res) => {
@@ -291,4 +322,4 @@ const getMyFavourites = async (req, res) => {
 
 
 
-module.exports = {songs , getSongs , getSongById ,addFavourite , favDelete ,getMyFavourites ,updatesong , songsplayuser}
+module.exports = {songs , getSongs , getSongById ,addFavourite , favDelete ,getMyFavourites ,updatesong , userSongdelete, songsplayuser}
